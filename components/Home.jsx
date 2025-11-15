@@ -53,13 +53,13 @@ const Home = () => {
   // Function to render each task item
   const renderItem = ({ item, index }) => (
     <View style={styles.task}>
-      <Text style={styles.itemList}>{String(item)}</Text>{/* Display the task */}
+      <Text style={styles.itemList}>{String(item)}</Text>
       <View style={styles.taskButtons}>
         <TouchableOpacity onPress={() => handleEditTask(index)}>
-          <Text style={styles.editButton}>Edit</Text> {/* Edit button */}
+          <Text style={styles.editButton}>Edit</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => handleDeleteTask(index)}>
-          <Text style={styles.deleteButton}>Delete</Text> {/* Delete button */}
+          <Text style={styles.deleteButton}>Delete</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -68,7 +68,7 @@ const Home = () => {
   // Main UI rendering
   return (
     <View style={styles.container}>
-      <Text style={styles.heading}>My todo</Text> {/* App heading */}
+      <Text style={styles.heading}>My todo</Text>
       <TextInput
         style={styles.input}
         placeholder="Enter task" // Placeholder text for the input field
@@ -81,7 +81,7 @@ const Home = () => {
         onPress={handleAddTask} // Call handleAddTask on button press
       >
         <Text style={styles.addButtonText}>
-          {editIndex !== -1 ? "Update Task" : "Add Task"} {/* Button text changes based on edit mode */}
+          {editIndex !== -1 ? "Update Task" : "Add Task"} 
         </Text>
       </TouchableOpacity>
 
